@@ -1,0 +1,114 @@
+.spanclass {
+    white-space: nowrap;
+    font-size: 11px;
+}
+
+.rotate {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-left: -100%;
+    text-align: center;
+    display: inline-block;
+    transform: translateX(-0%) translateY(-0%) rotate(-90deg);
+    white-space: nowrap;
+}
+
+.button-main {
+    width: 80px;
+    height: 115px;
+    display: inline-block;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    outline: none;
+    transition: all 0.05s;
+    cursor: pointer;     
+    background-color: #00AEEF;
+}
+
+.button-main:hover {
+    opacity: 1;
+    border: 3px solid;
+}
+
+#reset-button {
+    background-color: #EA184D;
+}
+
+#model-fit {
+    background-color: #FAD201;
+}
+
+.button-class {
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.05s;
+    cursor: pointer;
+    background-color: #CFD5DC;
+}
+
+.button-metrics {
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.05s;
+    background-color: #CFD5DC;
+}
+
+.button-class:hover {
+    opacity: 1;
+    border: 3px solid;
+}
+
+.button-counter {
+    width: 50px;
+    height: 20px;
+    border: none;
+    border-radius: 50px;   
+    display: inline-block;
+}
+
+.button-metrics-value {
+    width: 50px;
+    height: 20px;
+    border: none;
+    border-radius: 50px;   
+    display: inline-block;
+}
+
+.button-counter:focus {
+    outline: none;
+    border: none;
+}
+
+.button-class-total {
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.05s;
+}
+
+.button-class-total:hover {
+    opacity: 1;
+    border: none;
+}
+
+.counters {
+    border-radius: 40px;
+    display: block;
+    width: 22px;
+    padding: 15px;
+    border: 2px solid;
+    background-color: white;
+    font-size: 18px;
+}

@@ -1,0 +1,51 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.3.3/webcomponents-lite.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='/facets.css') }}">
+<table style="width: 100%; height: 100%">
+    <tr>
+        <td style="width: 5%" valign="top">
+            <table style="border-spacing: 0 6px;" id="main-table">
+                <tr><td style="text-align: center"><button class="button-main" id="export-labels"><span class="rotate">Export Labels</span></button></td></tr>
+                <tr><td style="text-align: center"><button class="button-main" id="reset-button"><span class="rotate">Reset All</span></button></td></tr>
+                <tr><td><hr></td></tr>
+                <tr><td style="text-align: center"><button class="button-class" value="spanclass-Valid"><span class="spanclass">Valid</span></button></td></tr>
+                <tr><td style="text-align: center"><button class="button-counter"><span class="spanclass-counter" id="spanclass-Valid">0</span></button></td></tr>
+                
+                <tr><td style="text-align: center"><button class="button-class" value="spanclass-Invalid"><span class="spanclass">Invalid</span></button></td></tr>
+                <tr><td style="text-align: center"><button class="button-counter"><span class="spanclass-counter" id="spanclass-Invalid">0</span></button></td></tr>
+                
+                <tr><td style="text-align: center"><button class="button-class" value="spanclass-Kinda Valid"><span class="spanclass">Kinda Valid</span></button></td></tr>
+                <tr><td style="text-align: center"><button class="button-counter"><span class="spanclass-counter" id="spanclass-Kinda Valid">0</span></button></td></tr>
+                
+                <tr><td style="text-align: center"><button class="button-class" value="spanclass-Really Invalid"><span class="spanclass">Really Invalid</span></button></td></tr>
+                <tr><td style="text-align: center"><button class="button-counter"><span class="spanclass-counter" id="spanclass-Really Invalid">0</span></button></td></tr>
+                <tr><td><hr></td></tr>
+                <tr><td style="text-align: center"><button class="button-class-total"><span class="spanclass">Total</span></button></td></tr>
+                <tr><td style="text-align: center"><button class="button-counter"><span id="spantotal">0</span></button></td></tr>
+                <tr><td><hr></td></tr>
+                <tr><td>
+                    <select name="models" id="models">
+                        <option value="RandomForest">RandomForest</option>
+                        <option value="XGBoost">XGBoost</option>
+                    </select>
+                </td></tr>
+                <tr><td style="text-align: center"><button class="button-main" id="model-fit"><span class="rotate">Fit Model</span></button></td></tr>
+                <tr><td style="text-align: center"><button class="button-main" id="model-export"><span class="rotate">Export Model</span></button></td></tr>
+                <tr><td><hr></td></tr>
+                <tr><td style="text-align: center"><button class="button-metrics" value="spanclass-Accuracy"><span class="spanclass">Accuracy</span></button></td></tr>
+                <tr><td style="text-align: center"><button class="button-metrics-value"><span class="spanclass-metric" id="spanclass-Accuracy">0</span></button></td></tr>
+                <tr><td style="text-align: center"><button class="button-metrics" value="spanclass-Precision"><span class="spanclass">Precision</span></button></td></tr>
+                <tr><td style="text-align: center"><button class="button-metrics-value"><span class="spanclass-metric" id="spanclass-Precision">0</span></button></td></tr>
+                <tr><td style="text-align: center"><button class="button-metrics" value="spanclass-Recall"><span class="spanclass">Recall</span></button></td></tr>
+                <tr><td style="text-align: center"><button class="button-metrics-value"><span class="spanclass-metric" id="spanclass-Recall">0</span></button></td></tr>
+            </table>
+        </td>
+        <td>
+            <facets-dive sprite-image-width="270" sprite-image-height="270" id="elem"></facets-dive>
+        </td>
+    </tr>
+</table>
+{% raw %}
+{{facets}}
+{% endraw %}
+<script type="text/javascript" src="{{ url_for('static', filename='/var_data.js') }}"></script>
+<script defer type="text/javascript" src="{{ url_for('static', filename='/selections.js') }}"></script>
