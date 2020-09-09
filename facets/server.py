@@ -32,7 +32,7 @@ def export_labels():
     with open(os.path.join(app.root_path, 'labels/', filename), 'w') as fp:
         json.dump(json_data_out, fp)
     
-    filename = now + '-labels-array.json'
+    filename = now + '-labels-array.txt'
     with open(os.path.join(app.root_path, 'labels/', filename), 'w') as fp:
         fp.write(str(label_arr))
         

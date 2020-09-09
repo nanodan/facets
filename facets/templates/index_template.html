@@ -7,17 +7,7 @@
                 <tr><td style="text-align: center"><button class="button-main" id="export-labels"><span class="rotate">Export Labels</span></button></td></tr>
                 <tr><td style="text-align: center"><button class="button-main" id="reset-button"><span class="rotate">Reset All</span></button></td></tr>
                 <tr><td><hr></td></tr>
-                <tr><td style="text-align: center"><button class="button-class" value="spanclass-Valid"><span class="spanclass">Valid</span></button></td></tr>
-                <tr><td style="text-align: center"><button class="button-counter"><span class="spanclass-counter" id="spanclass-Valid">0</span></button></td></tr>
-                
-                <tr><td style="text-align: center"><button class="button-class" value="spanclass-Invalid"><span class="spanclass">Invalid</span></button></td></tr>
-                <tr><td style="text-align: center"><button class="button-counter"><span class="spanclass-counter" id="spanclass-Invalid">0</span></button></td></tr>
-                
-                <tr><td style="text-align: center"><button class="button-class" value="spanclass-Kinda Valid"><span class="spanclass">Kinda Valid</span></button></td></tr>
-                <tr><td style="text-align: center"><button class="button-counter"><span class="spanclass-counter" id="spanclass-Kinda Valid">0</span></button></td></tr>
-                
-                <tr><td style="text-align: center"><button class="button-class" value="spanclass-Really Invalid"><span class="spanclass">Really Invalid</span></button></td></tr>
-                <tr><td style="text-align: center"><button class="button-counter"><span class="spanclass-counter" id="spanclass-Really Invalid">0</span></button></td></tr>
+                {{classes}}
                 <tr><td><hr></td></tr>
                 <tr><td style="text-align: center"><button class="button-class-total"><span class="spanclass">Total</span></button></td></tr>
                 <tr><td style="text-align: center"><button class="button-counter"><span id="spantotal">0</span></button></td></tr>
@@ -40,7 +30,7 @@
             </table>
         </td>
         <td>
-            <facets-dive sprite-image-width="270" sprite-image-height="270" id="elem"></facets-dive>
+            <facets-dive sprite-image-width="{{sprite-width}}" sprite-image-height="{{sprite-height}}" id="elem"></facets-dive>
         </td>
     </tr>
 </table>

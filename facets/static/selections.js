@@ -12,7 +12,7 @@ for (var i=0, len=localStorage.length; i<len; i++) {
 }
 document.getElementById('spantotal').innerHTML = totalLength;
 document.querySelector("#elem").data = data;
-document.querySelector("#elem").atlasUrl = "/static/atlas_test.png";
+document.querySelector("#elem").atlasUrl = "/static/atlas.png";
 
 document.getElementById("elem").addEventListener("click", function(e) {
     var rects = document.getElementById("elem").shadowRoot.getElementById("vis").shadowRoot.getElementById("holder").querySelectorAll("rect")
@@ -119,6 +119,8 @@ document.getElementById("reset-button").addEventListener("click", function() {
     for (var ii=0; ii<counterIds.length; ii++) {
         counterIds[ii].innerHTML = "0";
     }
+    document.getElementById('spantotal').innerHTML = "0";
+    totalLength = 0;
 });
 
 document.getElementById("export-labels").addEventListener("click", function() {
